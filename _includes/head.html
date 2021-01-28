@@ -1,0 +1,33 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css" type="text/css" media="screen" title="no title" charset="utf-8">
+    <link rel="shortcut icon" href="{{ site.baseurl }}/favicon.ico">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    {% if site.tags != "" %}
+        {% include collecttags.html %}
+    {% endif %}
+    {% if page.excerpt %}
+    <meta name="description" content="{{ page.excerpt | strip_html }}" />
+    <meta property="og:description" content="{{ page.excerpt | strip_html }}" />
+    {% elsif page.description %}
+    <meta name="description" content="{{ page.description }}" />
+    <meta property="og:description" content="{{ page.description }}" />
+    {% endif %}
+    <meta property="og:locale" content="en_IN" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="{{ page.title }}" />
+
+    <meta property="og:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url }}" />
+    <meta property="og:site_name" content="TheISRO" />
+
+    {% if page.tags %}
+        {% for tag in page.tags %}
+    <meta property="article:tag" content="{{ tag }}" />
+        {% endfor %}
+    {% endif %}
+    <!-- seo plugin -->
+    {% seo %}
+</head>
+

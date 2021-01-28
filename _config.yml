@@ -1,0 +1,23 @@
+title: Tiwit Life Sciences
+description: A cord blood banking services company
+author: tiwitin
+url: http://tiwitin.github.io/
+excerpt_separator: <!--more-->
+paginate: 3
+paginate_path: /page/:num/
+
+exclude: [
+    'Makefile',
+    'Gemfile',
+    'Gemfile.lock',
+    'README.md',
+    'CNAME'
+]
+
+sass:
+    sass_dir: assets/css
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-paginate
