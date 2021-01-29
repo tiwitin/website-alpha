@@ -1,5 +1,6 @@
 ---
 layout: page
+title: What are Stem cells?
 permalink: /what-are-stem-cells/
 ---
 
