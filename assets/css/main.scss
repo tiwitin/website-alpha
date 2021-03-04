@@ -35,6 +35,10 @@ p {
     color: red;
 }
 
+.navbar-light .navbar-nav .nav-link {
+    color: green;
+}
+
 li.nav-item {
     display: flex;
     border: 1px solid grey;
@@ -45,6 +49,7 @@ li.nav-item {
         justify-content: center;
         padding: 5px 10px;
         text-transform: uppercase;
+        color: green;
         &:hover {
             color: black;
             background: white;
@@ -243,4 +248,46 @@ footer {
     }
 }
 
+.video-intro {
+    position: relative;
+    background-color: black;
+    /*height: 75vh;*/
+    /*min-height: 25rem;*/
+    width: 100%;
+    overflow: hidden;
+}
 
+.video-intro video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.video-intro .container {
+    position: relative;
+    z-index: 2;
+}
+
+.video-intro .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+.btn-pill {
+    border-radius: 25px;
+}
